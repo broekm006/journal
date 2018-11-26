@@ -1,61 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity"
+    tools:context=".InputActivity"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/Title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Title"
-        android:inputType="text" />
-
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:id="@+id/Title_detail"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="Content" />
+        android:text="Some Title"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="95dp" />
 
     <android.support.v7.widget.GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:columnCount="4">
+        app:columnCount="2">
 
-        <ImageButton
-            android:id="@+id/cry"
-            android:layout_width="190px"
-            android:layout_height="190px"
-            app:srcCompat="@drawable/cry" />
+        <TextView
+            android:id="@+id/Date_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Some Date" />
 
-        <ImageButton
-            android:id="@+id/worry"
-            android:layout_width="190px"
-            android:layout_height="190px"
-            app:srcCompat="@drawable/worry" />
-
-        <ImageButton
-            android:id="@+id/happy"
-            android:layout_width="190px"
-            android:layout_height="190px"
-            app:srcCompat="@drawable/grinning" />
-
-        <ImageButton
-            android:id="@+id/happy_cry"
-            android:layout_width="190px"
-            android:layout_height="190px"
-            app:srcCompat="@drawable/tears_of_joy" />
+        <TextView
+            android:id="@+id/Mood_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Some Mood" />
     </android.support.v7.widget.GridLayout>
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/Description_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit Entry!" />
+        android:layout_weight="1"
+        android:text="Some description" />
 </LinearLayout>

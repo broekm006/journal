@@ -13,11 +13,13 @@
         android:layout_height="135dp"
         android:layout_gravity="bottom|end"
         android:clickable="true"
+        android:onClick="onClick"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ListView
+        android:id="@+id/listy"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
     </ListView>
 </android.support.design.widget.CoordinatorLayout>
