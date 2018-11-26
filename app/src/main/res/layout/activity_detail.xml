@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Content" />
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:columnCount="4">
+
+        <ImageButton
+            android:id="@+id/cry"
+            android:layout_width="190px"
+            android:layout_height="190px"
+            app:srcCompat="@drawable/cry" />
+
+        <ImageButton
+            android:id="@+id/worry"
+            android:layout_width="190px"
+            android:layout_height="190px"
+            app:srcCompat="@drawable/worry" />
+
+        <ImageButton
+            android:id="@+id/happy"
+            android:layout_width="190px"
+            android:layout_height="190px"
+            app:srcCompat="@drawable/grinning" />
+
+        <ImageButton
+            android:id="@+id/happy_cry"
+            android:layout_width="190px"
+            android:layout_height="190px"
+            app:srcCompat="@drawable/tears_of_joy" />
+    </android.support.v7.widget.GridLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Entry!" />
+</LinearLayout>
