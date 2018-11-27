@@ -9,12 +9,13 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton2"
-        android:layout_width="178dp"
-        android:layout_height="135dp"
+        android:layout_width="88dp"
+        android:layout_height="96dp"
         android:layout_gravity="bottom|end"
         android:clickable="true"
         android:onClick="onClick"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/colorAccent" />
 
     <ListView
         android:id="@+id/listy"

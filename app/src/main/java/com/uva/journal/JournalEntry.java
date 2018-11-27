@@ -1,15 +1,12 @@
 package com.uva.journal;
 
 import java.io.Serializable;
-import java.sql.Time;
 
 public class JournalEntry implements Serializable {
     private int id;
-    private String title, content, mood;
-    private Time timestamp;
+    private String title, content, mood, timestamp;
 
-    public JournalEntry(int id, String title, String content, String mood, Time timestamp) {
-        this.id = id;
+    public JournalEntry(String title, String content, String mood, String timestamp) {
         this.title = title;
         this.content = content;
         this.mood = mood;
@@ -32,7 +29,7 @@ public class JournalEntry implements Serializable {
         return mood;
     }
 
-    public Time getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
