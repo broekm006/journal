@@ -6,6 +6,7 @@ public class JournalEntry implements Serializable {
     private int id;
     private String title, content, mood, timestamp;
 
+    // constructor for base items
     public JournalEntry(String title, String content, String mood, String timestamp) {
         this.title = title;
         this.content = content;
@@ -13,6 +14,7 @@ public class JournalEntry implements Serializable {
         this.timestamp = timestamp;
     }
 
+    // methods to return specific entries
     public int getId() {
         return id;
     }

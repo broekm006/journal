@@ -20,6 +20,7 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
+        // find image buttons and set click listener
         ImageButton dead = (ImageButton) findViewById(R.id.dead);
         dead.setOnClickListener(this);
         ImageButton cry = (ImageButton) findViewById(R.id.sad);
@@ -29,10 +30,12 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
         ImageButton happyCry = (ImageButton) findViewById(R.id.happy_joke);
         happyCry.setOnClickListener(this);
 
+        // disable submit button untill emoji is clicked
         btn = (Button) findViewById(R.id.button);
         btn.setEnabled(false);
     }
 
+    // add new entry to journal
     public void addEntry(View view){
         TextView title = findViewById(R.id.Title);
         TextView content = findViewById(R.id.editText);
@@ -47,6 +50,7 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+    // check which emoji is clicked and re-enable submit button
     @Override
     public void onClick(View view){
 

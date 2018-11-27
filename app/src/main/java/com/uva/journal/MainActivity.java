@@ -17,13 +17,16 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
     EntryDatabase db;
     EntryAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         db = EntryDatabase.getInstance(getApplicationContext());
         adapter = new EntryAdapter(this, db.selectAll());
 
+        // set listeners > onclick
         ListView listview = (ListView) findViewById(R.id.listy);
         listview.setAdapter(adapter);
         listview.setOnItemClickListener(new ListViewClickListener());
@@ -31,14 +34,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onClick(View v){
+
+    // on click allow for new input
+        public void onClick(View v){
         startActivity(new Intent(MainActivity.this, InputActivity.class));
     }
 
+    // when list item is clicked get information from cursor and open detail page
     private class ListViewClickListener implements AdapterView.OnItemClickListener{
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            //JournalEntry entry = (JournalEntry) adapterView.getItemAtPosition(i);
             Cursor anotherOne = (Cursor) adapterView.getItemAtPosition(i);
 
             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
@@ -51,18 +56,23 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // if item in list is clicked for longer period of time delete object
     private class ListViewLongClickListener implements AdapterView.OnItemLongClickListener{
         @Override
         public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
             Cursor cursor = (Cursor) adapterView.getItemAtPosition(i);
             long position = cursor.getLong(cursor.getColumnIndex("_id"));
-            System.out.println(position);
+
+            // delete current entry
             db.delete(position);
+
+            // refresh page
             updateData();
             return true;
         }
     }
 
+    // method to refresh the page after each action (delete or insert)
     public void updateData(){
         Cursor second_cursor= db.selectAll();
         adapter.swapCursor(second_cursor);
@@ -71,6 +81,5 @@ public class MainActivity extends AppCompatActivity {
     public void onResume(){
         super.onResume();
     }
-
 
 }

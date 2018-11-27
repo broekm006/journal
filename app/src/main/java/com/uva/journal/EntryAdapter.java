@@ -14,6 +14,7 @@ public class EntryAdapter extends ResourceCursorAdapter{
         super(context, R.layout.entry_row, cursor);
     }
 
+    // get information and fill listview
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         TextView title = view.findViewById(R.id.text_title);
@@ -21,12 +22,10 @@ public class EntryAdapter extends ResourceCursorAdapter{
         TextView mood = view.findViewById(R.id.text_mood);
         ImageView img = view.findViewById(R.id.text_image);
 
+        // replace current information with the correct information from the database
         title.setText(cursor.getString(cursor.getColumnIndex("title")));
         date.setText(cursor.getString(cursor.getColumnIndex("timestamp")));
         mood.setText(cursor.getString(cursor.getColumnIndex("mood")));
-        //img.setImageResource(R.drawable.happy_joke);
-
-        int id = context.getResources().getIdentifier(cursor.getString(cursor.getColumnIndex("mood")), "drawable", context.getPackageName());
-        img.setImageResource(id);
+        img.setImageResource(context.getResources().getIdentifier(cursor.getString(cursor.getColumnIndex("mood")), "drawable", context.getPackageName()));
         }
 }

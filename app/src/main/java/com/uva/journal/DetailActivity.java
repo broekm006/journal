@@ -12,23 +12,23 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        // retrieve data from Main
         Intent intent = getIntent();
-        String titleRetreived = (String) intent.getSerializableExtra("title");
-        String contentRetreived = (String) intent.getSerializableExtra("content");
-        String moodRetreived = (String) intent.getSerializableExtra("mood");
-        String timestampRetreived = (String) intent.getSerializableExtra("timestamp");
+        String titleRetrieved = (String) intent.getSerializableExtra("title");
+        String contentRetrieved = (String) intent.getSerializableExtra("content");
+        String moodRetrieved = (String) intent.getSerializableExtra("mood");
+        String timestampRetrieved = (String) intent.getSerializableExtra("timestamp");
 
-
+        // get location fields from .xml based on resource id
         TextView title = findViewById(R.id.Title_detail);
         TextView content = findViewById(R.id.Description_detail);
         TextView mood = findViewById(R.id.Mood_detail);
         TextView timestamp = findViewById(R.id.Date_detail);
 
-        title.setText(titleRetreived);
-        content.setText(contentRetreived);
-        mood.setText(moodRetreived);
-        timestamp.setText(timestampRetreived);
-
-        //retrieved.getId();
+        // update .xml fields based on retrieved data
+        title.setText(titleRetrieved);
+        content.setText(contentRetrieved);
+        mood.setText(moodRetrieved);
+        timestamp.setText(timestampRetrieved);
     }
 }
