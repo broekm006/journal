@@ -11,7 +11,11 @@
         android:id="@+id/Title_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/aclonica"
         android:text="Some Title"
+        android:textSize="24sp"
         tools:layout_editor_absoluteX="135dp"
         tools:layout_editor_absoluteY="95dp" />
 
@@ -24,6 +28,9 @@
             android:id="@+id/Date_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/aclonica"
             android:text="Some Date" />
 
         <TextView
@@ -31,6 +38,9 @@
             android:layout_width="105dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/aclonica"
             android:text="Some Mood" />
     </android.support.v7.widget.GridLayout>
 
@@ -38,6 +48,11 @@
         android:id="@+id/Description_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_weight="1"
+        android:fontFamily="@font/aclonica"
         android:text="Some description" />
 </LinearLayout>
