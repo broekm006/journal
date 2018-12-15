@@ -28,7 +28,7 @@ public class DetailActivity extends AppCompatActivity {
         // update .xml fields based on retrieved data
         title.setText(titleRetrieved);
         content.setText(contentRetrieved);
-        mood.setText(moodRetrieved);
+        mood.setText("Mood:  " + moodRetrieved);
         timestamp.setText(timestampRetrieved);
     }
 }
