@@ -2,17 +2,11 @@ package com.uva.journal;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.annotation.MainThread;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
-
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     EntryDatabase db;
